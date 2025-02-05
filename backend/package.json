@@ -1,0 +1,21 @@
+{
+	"name": "backend",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"debug": "node --inspect-brk index.js",
+		"dev": "nodemon index.js --ignore ./frontend",
+		"serve": "node index.js --mode=production"
+	},
+	"dependencies": {
+		"@shopify/shopify-app-express": "^5.0.12",
+		"@shopify/shopify-app-session-storage-sqlite": "^4.0.12",
+		"mysql2": "^3.12.0",
+		"sequelize": "^6.37.5",
+		"serve-static": "^1.16.2"
+	},
+	"devDependencies": {
+		"nodemon": "^3.1.9",
+		"sequelize-cli": "^6.6.2"
+	}
+}
