@@ -1,0 +1,47 @@
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-family: Inter, sans-serif;
+}
+
+html {
+	font-size: 17px !important;
+}
+
+body {
+	margin: 0;
+}
+
+.Polaris-Select .Polaris-Select__Content,
+.Polaris-Select .Polaris-Select__Input,
+.Polaris-TextField .Polaris-TextField__Input {
+	font-size: 0.8125rem;
+}
+
+.Polaris-BlockStack.Polaris-BlockStack--listReset {
+	gap: 0.5rem;
+}
+
+.Polaris-ChoiceList__ChoiceChildren > .Polaris-Box {
+	padding-block-start: 0.3rem;
+}
+
+.Polaris-IndexTable__TableCell:has(.Polaris-Avatar) {
+	width: 0px;
+}
+
+.Polaris-Icon {
+	margin: 0px;
+}
+
+@media screen and (max-width: 842px) {
+	html:not(html:has(div[id^="modal-content"])) {
+		font-size: 18px !important;
+	}
+}
+
+@media screen and (max-width: 619px) {
+	html:has(div[id^="modal-content"]) {
+		font-size: 18px !important;
+	}
+}
