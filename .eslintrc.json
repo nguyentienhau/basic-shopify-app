@@ -1,0 +1,109 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"commonjs": true,
+		"node": true
+	},
+	"ignorePatterns": ["**/node_modules"],
+	"globals": {
+		"WIKI_LINK": "readonly"
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		},
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			},
+			"alias": {
+				"map": [
+					["@", "./frontend"],
+					["configurations", "./backend/configurations"],
+					["constants", "./backend/constants"],
+					["helpers", "./backend/helpers"],
+					["middlewares", "./backend/middlewares"],
+					["models", "./backend/models"]
+				],
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		}
+	},
+	"plugins": ["react", "spellcheck", "import"],
+	"extends": ["eslint:recommended", "plugin:react/recommended", "plugin:import/recommended"],
+	"rules": {
+		"indent": ["warn", "tab", { "SwitchCase": 1 }],
+		"linebreak-style": ["warn", "windows"],
+		"quotes": ["warn", "double"],
+		"semi": ["warn", "always"],
+		"no-unused-vars": ["warn", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
+		"react/react-in-jsx-scope": "off",
+		"import/no-unresolved": ["error", { "commonjs": true, "amd": true }],
+		"import/named": ["error"],
+		"import/namespace": ["off"],
+		"import/default": ["error"],
+		"import/export": ["error"],
+		"import/no-extraneous-dependencies": ["error"],
+		"import/no-named-as-default-member": ["off"],
+		"import/order": ["warn", { "groups": ["builtin", "external", "internal"] }],
+		"spellcheck/spell-checker": [
+			"warn",
+			{
+				"comments": true,
+				"strings": true,
+				"identifiers": true,
+				"lang": "en_US",
+				"skipWords": [
+					"mysql",
+					"sequelize",
+					"readdir",
+					"webpack",
+					"jsx",
+					"tsx",
+					"shopify",
+					"polaris",
+					"frontend",
+					"localhost",
+					"bool",
+					"func",
+					"redux",
+					"webhook",
+					"webhooks",
+					"vite",
+					"graphql",
+					"formatjs",
+					"pluralrules",
+					"href",
+					"uri",
+					"iframe",
+					"checkbox",
+					"gid",
+					"upsert",
+					"hmr",
+					"wss",
+					"csp",
+					"myshopify",
+					"sig",
+					"commerce",
+					"argv",
+					"pathname",
+					"lngs",
+					"noopener",
+					"noreferrer",
+					"tooltip"
+				],
+				"skipIfMatch": ["http://[^s]*"],
+				"skipWordIfMatch": ["^foobar.*$"],
+				"minLength": 3
+			}
+		]
+	}
+}
